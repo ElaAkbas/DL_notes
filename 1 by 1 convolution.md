@@ -19,7 +19,7 @@ If you look at the image above, it seems like 1 × 1 convolution means 1 and 1 i
 
 It seems however that this always has the effect of reducing the dimensionality by a lot. You compress it.
 
-![Reducing dimensionality](Pasted%20image%2020220610213155.png)
+![Reducing dimensionality](images/Pasted%20image%2020220610213155.png)
 
 You can also apply this with inception architectures. 
 
