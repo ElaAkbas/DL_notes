@@ -5,41 +5,41 @@ You only apply the filters to a small square of the matrix every time, and then 
 
 When you have smaller squares, you can feed them into a normal feed forward neural network. 
 
-![What is ](Pasted%20image%2020220609115209.png)
+![What is ](images/Pasted%20image%2020220609115209.png)
 
 ## Convolution 
 The idea of convolution layer is to take smaller squares of (kernel size, kernel size) out of 
 the bigger image and turn those squares into a single pixel with a filter.  The smaller squares are called the filter window. We say that we have a sliding window.  Then you move the filter window forward to the next position and make another pixel. After this you have a new square which is (probably) smaller wich is a more abstract version of the previous square.  
 
-![Convolution high level](Pasted%20image%2020220609144805.png)
+![Convolution high level](images/Pasted%20image%2020220609144805.png)
 
 You do convolution to make the image smaller because if you don't, and you just put all the pixels behind eachother with fully connected layers the networks become too big. We need to run the functions through an activation function to learn with back propagation. The idea is to make a smaller, more abstract version of the input, so you can still run the activation function effectifly on the input.  
 
-![Convolution example](Pasted%20image%2020220609144444.png)
+![Convolution example](images/Pasted%20image%2020220609144444.png)
 
 With CNN you actually learn the filters or the kernel! So here you have basically simple kernel where you just multiply the value from the matrix with the value from the kernel for each kernel, and then you take the sum. This way you can learn the values of the kernel!  
 
 In a convolution layer you can either have one kernel which you then apply sliding window style to the whole image or you can also learn seperate filters for each part of the image. 
 
-![The same kernel (W) for every part of the image](Pasted%20image%2020220609151322.png)
+![The same kernel (W) for every part of the image](images/Pasted%20image%2020220609151322.png)
 Instead of just doing one convolution layer you can also run multiple kernels at the same point in the network. This gives you multiple new channels. This way you can create n feature maps. See the image 
 
-![You go from 32x32x3 to 28x28x6](Pasted%20image%2020220609153029.png)
+![You go from 32x32x3 to 28x28x6](images/Pasted%20image%2020220609153029.png)
 
 So you get different feature maps from the same input. This sort of extracts different features from the input into seperate channels. But you also combine the filters together right away to get a scaler from multiple channels. So you could have a kernel which is 3x3**x3** to get one number from a rbg. 
 
-![One value after combining the result of filters](Pasted%20image%2020220609161656.png)
+![One value after combining the result of filters](images/Pasted%20image%2020220609161656.png)
 
-![Bigger kernel. Each kernel layer can be different](Pasted%20image%2020220609161611.png)
+![Bigger kernel. Each kernel layer can be different](images/Pasted%20image%2020220609161611.png)
 
 
 ### Stride
 
 The stride is how much you move the filter window over the matrix. 
 
-![stride2](stride2.gif)
+![stride2](images/stride2.gif)
 
-![Stride](Pasted%20image%2020220308120805.png)
+![Stride](images/Pasted%20image%2020220308120805.png)
 
 The stide affects the output size 
 
@@ -47,20 +47,20 @@ The stide affects the output size
 ## Padding
 If you take a stride which causes you to jump out of bound, then you get problems (3x3 with stride of 2). For this reason we have padding which makes the image larger to fit. 
 
-![Kenrel not fitting without padding](Pasted%20image%2020220609200147.png)
+![Kenrel not fitting without padding](images/Pasted%20image%2020220609200147.png)
 
 Without padding, you also filter (apply kernel) the values at the edges of the matrix less times because the filter only moves over it only once. This is another reason to add padding as then it only moves over the padded once, but we don't care about the padding.  
 
 
-![Pading](Pasted%20image%2020220308121226.png)
+![Pading](images/Pasted%20image%2020220308121226.png)
 
-![Padding](Pasted%20image%2020220308121243.png)
+![Padding](images/Pasted%20image%2020220308121243.png)
 
 The values of the padded cells do not matter much because you only look at them once mostly. 
 
 The idea is now to learn the filters that are needed to get the best results based on a [loss function](loss%20function.md).
 
-![Another example of padding the kernel will consider the border pixel equal times](Pasted%20image%2020220609200311.png)
+![Another example of padding the kernel will consider the border pixel equal times](images/Pasted%20image%2020220609200311.png)
 
 ### Padding values
 The actual values you put in the padded cell don't matter that much because it taken into account less. What you actually put in there could be anything often it is 0 or 1 or the max of the neighbors. 

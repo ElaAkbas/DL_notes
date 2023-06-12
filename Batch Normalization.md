@@ -1,7 +1,7 @@
 # Batch normalization
 The idea of batch normalization is that you want to normalize the hidden layers to improve performance. The hidden layers are the input to the next layer so normalizing that would be better. But the problem is that you don't know how to normalize the hidden layers because you don't know what the numbers represent. 
 
-![Batch Normalization](Pasted%20image%2020220611193128.png)
+![Batch Normalization](images/Pasted%20image%2020220611193128.png)
 
 
 

@@ -14,7 +14,7 @@
 
 ## Calculate Sizes of layers and stuff
 
-![Question](Pasted%20image%2020220609200810.png)
+![Question](images/Pasted%20image%2020220609200810.png)
 
 
 $w_{out} = \frac{W_{in}-f_{w}+2P}{S+1}$
@@ -60,7 +60,7 @@ Its the (filter size (4x4x3) + the bias (1)) x the number of filters (32) so: $(
 
 
 
-![Another question](Pasted%20image%2020220609231020.png)
+![Another question](images/Pasted%20image%2020220609231020.png)
 
 one filter: 8x8x10
 feature maps: 10
@@ -82,7 +82,7 @@ So here $h_1$ and $w_1$ are the width and height of the feature maps the depth i
 Its c.
 
 ## Another one
-![Another ](Pasted%20image%2020220610150201.png)
+![Another ](images/Pasted%20image%2020220610150201.png)
 
 
 ## How can dropout be implemented 
@@ -94,6 +94,6 @@ You make a random mask which you apply to the outputs of a layer and you set tho
 
 Why are the filtered versions shifted to the right?
 
-![Exponentially weighted averages](Pasted%20image%2020220611174051.png)
+![Exponentially weighted averages](images/Pasted%20image%2020220611174051.png)
 
 Because you take into account more of the higher points from before.  

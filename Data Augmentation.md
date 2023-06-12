@@ -12,7 +12,7 @@ You can do:
 - Adding noise 
 - ...
 
-![Data Augmentation](Pasted%20image%2020220611155013.png)
+![Data Augmentation](images/Pasted%20image%2020220611155013.png)
 
 You have to think about if this makes sense. For instance flipping does not make sense when you try to recognize written characters. 
 

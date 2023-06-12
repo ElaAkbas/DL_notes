@@ -20,13 +20,13 @@ backpropagate the model's error when training to optimize the weights.
 
 # Populair activation functions
 ## Linear
-![Linear activation function](Pasted%20image%2020220219161623.png)
+![Linear activation function](images/Pasted%20image%2020220219161623.png)
 
 - Easy to train but can't be very complex
 - You can find the defferntiation everywhere
 
 ## Sigmoid
-![Sigmoid activation function](Pasted%20image%2020220219161632.png)
+![Sigmoid activation function](images/Pasted%20image%2020220219161632.png)
 
 ### Pros 
 - More non linear
@@ -46,7 +46,7 @@ The main reason to use it is the nice 0-1 mapping
 
 ## Hyperbolic tangent 
 
-![](Pasted%20image%2020220219161905.png)
+![](images/Pasted%20image%2020220219161905.png)
 
 In the picture o should be z.  
 
@@ -66,7 +66,7 @@ training set is close to zero.
 
 # ReLU
 
-![](Pasted%20image%2020220219162202.png)
+![](images/Pasted%20image%2020220219162202.png)
 
 Tanh and sigmoid were among the most popular activation functions in 90’s but  
 because of their Vanishing gradient problem and sometimes Exploding gradient  
@@ -82,8 +82,8 @@ compared to the hyperbolic tangent. Its range is from 0 to infinity.
 
 Its better because in activation functions when we do [backpropagation](backpropagation.md) we have to take the derivatives for each perceptrons activation function. With most function you get something like this:
 
-![](Pasted%20image%2020220219162552.png)
+![](images/Pasted%20image%2020220219162552.png)
 
 This squasing happens because there is only change between 0-1. But relu does not have this. However during traning the output can fall into below zero and then the output will always be 0. For that there is leaky relu which assigns small numbers to negative values. 
 
-![](Pasted%20image%2020220219162728.png)
+![](images/Pasted%20image%2020220219162728.png)

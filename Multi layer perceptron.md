@@ -1,18 +1,18 @@
 # Multi layer perceptron
 Because every [perceptron](Perceptron.md) takes a list of inputs and then gives one output we can connect the outputs of many perceptrons together to form networks. This is called a multi layer perceptron. If you do this then you no longer need to have one perceptron solve the entire problem, but you can break up your problem into smaller parts first which will then be solved by a final perceptron. This is actually a requirement for more complicated problems because one perceptron can only make linear solutions. 
 
-![Linear solutions](Pasted%20image%2020220219152253.png)
+![Linear solutions](images/Pasted%20image%2020220219152253.png)
 
 This turns out to be a great way of solving problems. Although it is hard to get 100% correct which would be possible with rule based systems but for some problems the rule based systems are too hard to make. So perceptrons are just another tool on your tool chest.
 
 ## One layer
 You can start by giving the same input to multiple perceptrons but this still gives linear results.
 
-![Multi layer Perceptron](Pasted%20image%2020220219151951.png)
+![Multi layer Perceptron](images/Pasted%20image%2020220219151951.png)
 
 No you basically get a matrix multiplication instead of a vector. 
 
-![Inputs go to different perceptrons](Pasted%20image%2020220219152038.png)
+![Inputs go to different perceptrons](images/Pasted%20image%2020220219152038.png)
 
 You have an input vector and dot product with the matrix.
 
@@ -25,7 +25,7 @@ W is a matrix now and its a vector of biases now.
 ## More layer 
 We can just string the perceptron together. They don't know where their input vector comes from.
 
-![MLP](Pasted%20image%2020220219152433.png)
+![MLP](images/Pasted%20image%2020220219152433.png)
 
 Now each layer is like the one layer calculation. Each layer gives $a^{l}= f(W^{l} \cdot a^{l-1} + b^l)$
 
@@ -44,7 +44,7 @@ Because there are multiple perceptrons in the last layer we have to have a funct
 ## Backprop
 Once we have the error function we can propagate the error backwards. 
 
-![Propagate error backwards](Pasted%20image%2020220219155149.png)
+![Propagate error backwards](images/Pasted%20image%2020220219155149.png)
 
 To goal is to know how each parameter contributes to the error.  Thus the derivative of the error with respect to each parameter is needed. Because the ultimate goal of back propagation is to find the change in the error with respect to the weights in the network.
 
@@ -57,9 +57,9 @@ So in the formula, we want to compute the derivative of the loss with respect to
 which we can do by computing the derivate of the loss with respect to a and multiply  
 that by the derivate of a with respect to the z.
 
-![](Pasted%20image%2020220219160933.png)
+![](images/Pasted%20image%2020220219160933.png)
 
 ### Continue backprop
 So with the chainrule the part you multiply gives is really the equation for that layer that you have to optimize. So this gives you how the loss contributes to each layer. Which is really the loss for each layer. Then you can use this loss for every layer to update every single perceptron based on the output and learning rate. 
 
-![](Pasted%20image%2020220219161133.png)
+![](images/Pasted%20image%2020220219161133.png)

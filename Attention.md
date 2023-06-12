@@ -11,10 +11,10 @@ So the attention is a layer which you first learn. This layer then learns what t
 
 With NLP, you have a sentence and the attention layer will tell you wich are the most important tokens from this sentence.
 
-![Attention aritecture the face of the dog is the most important](Pasted%20image%2020220610231714.png)
+![Attention aritecture the face of the dog is the most important](images/Pasted%20image%2020220610231714.png)
 
 So you have two neural networks. You use one nn first to extract the features (abstract representation of the input through convolution) and then you have an attention layer on these features wich will learn which of the features are the most important. This is an attention mask with for instance values lower for features more important and higher for features of higher importance.
 
-![Attention example](Pasted%20image%2020220610231917.png)
+![Attention example](images/Pasted%20image%2020220610231917.png)
 
 In the example 1x1 convolution is used to combine multiple channels.

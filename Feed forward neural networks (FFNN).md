@@ -4,7 +4,7 @@ Feed forward neural networks (FFNN) can be used to overcome the linearity proble
 
 So stacking logistic regressors will create non-linear classifiers which can learn **arbitrary decision boundaries** for linear classifier. This turns logistic regression into (feedforward) neural networks.
 
-![Graphical representation of feed forward network](../images/Pasted%20image%2020220603203033.png)
+![Graphical representation of feed forward network](images/Pasted%20image%2020220603203033.png)
 
 So what you see above is taking the input vector and multiply with multiple weight vectors every time also adding a bias. Then you take the sum of these cells and pass it to a function. Typically, a non-linear function to add non-linearity. This then gives you a new vector (the gray dots). This is then called a **hidden layer** because you can not interpret it any more back to the input. It is a more abstract representation of the input. 
 
@@ -14,7 +14,7 @@ We then keep going, multiplying the hidden layer by another weights vector and a
 
 If you would actually make a computer do this it is useful to use matrixes to kind glue the weights vectors together and computers know how to deal with matrixes well and fast. You can visualize the above picture with matrixes like below:
 
-![Feed forward visualized as matrix](../images/Pasted%20image%2020220603203248.png)
+![Feed forward visualized as matrix](images/Pasted%20image%2020220603203248.png)
 
 ## Feed forward  
 These types of networks are called feed forward because the output of a lower layer only affect higher layers and do not feed back into the same layer or lower layers. 

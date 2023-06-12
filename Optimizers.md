@@ -7,7 +7,7 @@ Optimization is the task of minimizing/maximizing an objective function. With de
 ## Gradient decent 
 
 
-![Optimization](Pasted%20image%2020220611164312.png)
+![Optimization](images/Pasted%20image%2020220611164312.png)
 
 With a single function it is like below:
 
@@ -49,17 +49,17 @@ So lets say you have 1000 images. You feed them trough the network to get the re
 - You can run out of memory
 - Some examples might be redundant
 
-![Batch gradient descent](Pasted%20image%2020220611170109.png)
+![Batch gradient descent](images/Pasted%20image%2020220611170109.png)
 
 #### Mini Batch Gradient descent
 
 With mini batch you run the model over batches of your dataset and then calculate the gradient for each input in the batch add them together to get a weights adjustment for one batch. Then you do this for all the batches. Either you adjust the parameters after batch or you add the adjustment for each batch together to get the adjustment to the parameters. 
 
-![Mini batch](Pasted%20image%2020220611170447.png)
+![Mini batch](images/Pasted%20image%2020220611170447.png)
 
 The size of the batch is a hyper parameter.
 
-![Mini batch cost function progress](Pasted%20image%2020220611170625.png)
+![Mini batch cost function progress](images/Pasted%20image%2020220611170625.png)
 
 **Advantages**
 
@@ -89,7 +89,7 @@ With the other gradient decent you combine the gradients of the inputs to make o
 - Increases runtime
 - Variance becomes large
 
-![Stochastic Gradient descent](Pasted%20image%2020220611171359.png)
+![Stochastic Gradient descent](images/Pasted%20image%2020220611171359.png)
 
 
 
@@ -111,11 +111,11 @@ $v(t)=\beta v(t-1)+(1-\beta)\Delta_{\theta}J(\theta_{t})$
 
 Now this causes the gradient movement to oscillate less because if the previous gradient was in the opposite direction it will pull back the current one. 
 
-![Momentum gradient descent](Pasted%20image%2020220611174729.png)
+![Momentum gradient descent](images/Pasted%20image%2020220611174729.png)
 
 This comes with 2 hyper parameters $\alpha$ = learning rate and $\beta$ = control of exponentially weighted average.  You can also see in the image that the first move is the same between steps because at the first one there is no previous to take into account.
 
-![Momentum vs no momentum](vlc_0UE1oC7A1c.gif)
+![Momentum vs no momentum](images/vlc_0UE1oC7A1c.gif)
 
 With momentum it is able to find the global minima because it takes into account the previous large movement downwards.
 
@@ -125,7 +125,7 @@ $v(t) = \mu v(t-1) + \Delta_{\theta}J(\theta_{t} - \mu v(t-1))$
 Here $\mu$ is the momentum. The idea is that you calculate the current momentum based on the previous momentum instead of the previous gradient. 
 
 
-![Nesterov Accelerated Momentum](Pasted%20image%2020220611180449.png)
+![Nesterov Accelerated Momentum](images/Pasted%20image%2020220611180449.png)
 
 This is called momentum because its like a ball rolling down a hill has momentum and if it has enough momentum it can roll over and out of a local minima.
 
@@ -187,7 +187,7 @@ $$\hat{m}_{t,i} = \frac{m_{t,i}}{1-\beta^{t_{1}}}~~~~~~~~~~~~\hat{v}_{t,i}=\frac
 
 So you divide the v and m by 1 - (their beta). This is done as a correction to reduce bias towards 0 at the beginning of the training. The idea of the correction is to ignore the past at the beginning. That effect stops because 1-b does not change the devision only has impact at the start. See the image below.
 
-![Corrected adam](Pasted%20image%2020220611192125.png)
+![Corrected adam](images/Pasted%20image%2020220611192125.png)
 
 #### Default values of Adam
 - $\eta=0.001$
@@ -207,4 +207,4 @@ Adam is basically the best solver.
 
 There are many implementations of optimizers.
 
-![Optimization solvers](vlc_D1bQoOsVdT.gif)
+![Optimization solvers](images/vlc_D1bQoOsVdT.gif)

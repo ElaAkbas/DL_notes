@@ -4,7 +4,7 @@ A perceptron is a simple machine which takes in a vector of numbers and then mul
 
 So ultimately the perceptron takes a list of numbers and turns it into 1 number. This is most often done with multiply with another list and then sum. This is dot product. Often in the final sum there is another hard coded value added which is called the bias. This can be looked at as the prior in basian statistics. 
 
-![[Pasted image 20220219131833.png]]
+![[images/Pasted image 20220219131833.png]]
 
 This picture can be captured in the formula:
 
@@ -29,7 +29,7 @@ $$o = \prod\limits_{i = 1}(w_{i} * x_{i})+ w_{0}$$
 
 But what do we do with the output? On it own it doesn't mean anything. That is where the f comes in at the end. This is a decision function that decides what the final output should be based on the result of the perceptron. It interprets the result of the perceptron or scales it. 
 
-![[Pasted image 20220219131448.png]]
+![[images/Pasted image 20220219131448.png]]
 
 Now if we want to write this down we get:
 

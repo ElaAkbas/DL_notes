@@ -6,7 +6,7 @@ In the context of machine learning, when you have **low bias** you have fewer as
 
 If you are **biased** then there are **too many** assumptions. 
 
-![Bias and varience](Pasted%20image%2020220611121118.png)
+![Bias and varience](images/Pasted%20image%2020220611121118.png)
 
 
 One kind of bias is also at a higher level than the humans 

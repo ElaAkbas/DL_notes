@@ -13,7 +13,7 @@ So 1 x 1 convolution makes sense to do with 3d cnn or when you have multipe chan
 
 
 
-![1 x 1 convolution example](Pasted%20image%2020220610211618.png)
+![1 x 1 convolution example](images/Pasted%20image%2020220610211618.png)
 
 If you look at the image above, it seems like 1 × 1 convolution means 1 and 1 in at least 2 dimensions. So in the image above you're not merging channels but instead just take a row. 
 
@@ -27,7 +27,7 @@ You can also apply this with inception architectures.
 
 You use the 1 x 1 to reduce the size of the input without too much computation. The idea is to do muliple types of convolution and just concatanate them together. 
 
-![comparing 1x1 and dimensionality reduction](Pasted%20image%2020220610211333.png)
+![comparing 1x1 and dimensionality reduction](images/Pasted%20image%2020220610211333.png)
 The 1 × 1 method works great because you can reduce the size of the input. In the inception architecture, they concatonate the layers together of these different ways of doing it. 
 
 

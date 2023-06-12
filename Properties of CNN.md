@@ -6,7 +6,7 @@ Convolution kernel is much smaller.
 
 With CNN you don't have a fully connected network. Only kernel size pixels are  connected to the next layer.  
 
-![Left is MLP and right is CNN](Pasted%20image%2020220609191432.png)
+![Left is MLP and right is CNN](images/Pasted%20image%2020220609191432.png)
 
 So in this example, you only make the laters neuron be influenced by the previous one. With MLP you basically multiply the entire input with one matrix instead. With CNN you take one matrix and apply it to small parts of the input every time. That leads to less connections. This is much faster to train. Also, it makes sense. Pixels in one corner don't have impact on another corner you would expect. The bigger the kernel size the larger features you want to pick up on. 
 
@@ -15,11 +15,11 @@ Kernel coefficients are identical for each input location. So with MLP you basic
 
 Anyway because you apply the kernel multiple times and just moving it along by 1 (if stride is 0) then get the same input influencing the results multiiple times. 
 
-![Parameter sharing](Pasted%20image%2020220609192403.png)
+![Parameter sharing](images/Pasted%20image%2020220609192403.png)
 
 With MLP it doesn't share parameters. With CNN it does. The outputs are influenced by multiple neurons.
 
-![2d parameter sharing](Pasted%20image%2020220609193009.png)
+![2d parameter sharing](images/Pasted%20image%2020220609193009.png)
 
 The image above makes more sense. So with MLP you would have 32x32 connections and you just multiply with a weights matrix/vector. With CNN you only have the filter and the same parameters go into multiple pixels on the output. 
 

@@ -4,7 +4,7 @@ Many strategies used in machine learning are explicitly designed to reduce the t
 
 Regularization often works by trading an increase in bias for a reduction in varience. An effective regulizer is one that reduces varience significantly while not overly increasing bias. 
 
-![Regulization in action](Pasted%20image%2020220611134419.png)
+![Regulization in action](images/Pasted%20image%2020220611134419.png)
 
 With regularization you make the model focus less on the noise. You change the learning of a model to make it satify certain constraints or preferences. 
 
@@ -52,7 +52,7 @@ So you don't divide alpha in half anymore and you don't take the square instead 
 
 L1 sometimes can cause sparse weights with some weights being high and many low as that is the best option.
 
-![Comparing L1 and L2](Pasted%20image%2020220611141630.png)
+![Comparing L1 and L2](images/Pasted%20image%2020220611141630.png)
 
 Because with L1 you just take the absolute value everything is treated the. With L2 you punish larger weights more then smaller weights. So L2 encourages  having multiple weights in the middle. L1 + L2 is a mix. You combine them by just having +
 
@@ -63,23 +63,23 @@ L2 is normally implemented in the optimizers you use.
 
 The idea of early stopping is to keep track of training and test performance of the model. You might get to a point where the training error goes down further but at a certain point the test error goes up again. When you notice this happening you can just stop early. The graph below shows this well:
 
-![Early stopping](Pasted%20image%2020220611142235.png)
+![Early stopping](images/Pasted%20image%2020220611142235.png)
 
 So you stop when you start overfitting. 
 
 These ideas of early stopping are related to the model capacity.
 
-![Model capacity](Pasted%20image%2020220611142537.png)
+![Model capacity](images/Pasted%20image%2020220611142537.png)
 
 It does turn out though that if you go a lot further the accuracy will improve again. This is called double decay. 
 
-![Double decay](Pasted%20image%2020220611144328.png)
+![Double decay](images/Pasted%20image%2020220611144328.png)
 
 ## Dropout
 
 With the dropout regularization technique you randomly remove units for each training iteration. 
 
-![Dropout with a neural network](Pasted%20image%2020220611145438.png)
+![Dropout with a neural network](images/Pasted%20image%2020220611145438.png)
 
 With dropout you train an ensemble consisting out of subnetworks that can be constructed by removing non-output units from an underlying base network.
 

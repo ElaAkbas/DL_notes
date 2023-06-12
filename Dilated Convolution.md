@@ -3,7 +3,7 @@
 With dialated convolution, you have empty spaces in the convolution layer. Only the red points are considered. The ore dilation the more points you skip. 
 
 
-![Diilated Convolutoin](Pasted%20image%2020220610150407.png)
+![Diilated Convolutoin](images/Pasted%20image%2020220610150407.png)
 
 The red points are the points wich are considered by the kernel. So instead of making the kernel a direct square by just having a square, you take a square but actually take every dialation (l) points from that square as input to the kernel. So you skip inputs into the convolution. However, you still traverse the whole matrix. So its just a different input pattern into the kernel.  
 
@@ -33,4 +33,4 @@ The math of dilated convolution is: $(F *_{l}k)(p)=\sum\limits_{s+lt=p}F(s)k(t)$
 ## Stacked convolution
 You can also have the same kernel but then have different filter layers with more dilation every time. 
 
-![Stacked Dilated Convolution](Pasted%20image%2020220610163558.png)
+![Stacked Dilated Convolution](images/Pasted%20image%2020220610163558.png)
