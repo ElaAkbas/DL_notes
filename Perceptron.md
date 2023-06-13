@@ -29,7 +29,7 @@ $$o = \prod\limits_{i = 1}(w_{i} * x_{i})+ w_{0}$$
 
 But what do we do with the output? On it own it doesn't mean anything. That is where the f comes in at the end. This is a decision function that decides what the final output should be based on the result of the perceptron. It interprets the result of the perceptron or scales it. 
 
-![[images/Pasted image 20220219131448.png]]
+![f](images/Pasted%20image%2020220219131448.png)
 
 Now if we want to write this down we get:
 
