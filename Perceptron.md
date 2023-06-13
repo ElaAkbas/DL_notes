@@ -4,7 +4,7 @@ A perceptron is a simple machine which takes in a vector of numbers and then mul
 
 So ultimately the perceptron takes a list of numbers and turns it into 1 number. This is most often done with multiply with another list and then sum. This is dot product. Often in the final sum there is another hard coded value added which is called the bias. This can be looked at as the prior in basian statistics. 
 
-![[images/Pasted%20image%20220219131833.png]]
+!(images/Pasted%20image%20220219131833.png)
 
 This picture can be captured in the formula:
 
