@@ -11,7 +11,7 @@ Optimization is the task of minimizing/maximizing an objective function. With de
 
 With a single function it is like below:
 
-![Gradient desent animation](gradient-desent.gif)
+![Gradient desent animation](images/gradient-desent.gif)
 
 But it is in higher dimension. 
 
@@ -99,7 +99,7 @@ With the other gradient decent you combine the gradients of the inputs to make o
 - Choosing a propper learning rate can be difficult
 - The same learning rate applies to all parameter updates 
 
-![Local minima](Localminima.gif)
+![Local minima](images/Localminima.gif)
 
 ### Resolving problems with Gradient Descent
 
